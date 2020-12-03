@@ -1,6 +1,5 @@
 import React from "react";
 import Time from "./Time";
-// import Instruction from './Instructions'
 
 export default function Ramp(props) {
   let input = props.input;
@@ -9,9 +8,9 @@ export default function Ramp(props) {
     switch (input) {
       case "":
         return (
-            <div style={{ textAlign: "center" }}>
+            <div>
             <h3>Instructions</h3>
-            <ul>
+            <ul style={{ textAlign: "left" }}>
               <li>If the prop is undefined or falsy, the output should be the Time.</li>
               <li>If the prop is an array, the output should be a list of divs.</li>
               <li>

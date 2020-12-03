@@ -22,7 +22,7 @@ function App() {
         </input>
       </div>
 
-      <div style={{ marginLeft: "32%", marginTop: "5%", width: "500px" }}>
+      <div style={{ marginLeft: "33%", marginTop: "5%", width: "500px" }}>
         <Ramp input={input} />
       </div>
     </div>
