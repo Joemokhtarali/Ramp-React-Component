@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Ramp from "./Ramp";
 
 function App() {
+  const [input, setinput] = React.useState('');
+
+  const changeInput = (event) => {
+    setinput(event.target.value);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <div className="App" style={{ marginTop: "20%" }}>
+      <div>
+        <h2 style={{ color: "#6be0bf" }}> Welcome to Ramp!</h2>
+        <input
+          type="text"
+          placeholder="Enter your input"
+          value={input}
+          onChange={changeInput}
         >
-          Learn React
-        </a>
-      </header>
+        </input>
+      </div>
+
+      <div style={{ marginLeft: "32%", marginTop: "5%", width: "500px" }}>
+        {/* <Ramp input={input} /> */}
+      </div>
     </div>
   );
 }
