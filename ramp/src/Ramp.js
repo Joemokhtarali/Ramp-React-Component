@@ -27,13 +27,28 @@ export default function Ramp(props) {
         );
       case undefined || false || "undefined":
         return (
-          <div> <Time /></div>
+          <div>
+            {" "}
+            <Time />
+          </div>
         );
-
       default:
         return <div>{input}</div>;
     }
   };
+
+  if (input.charAt(0) === "[" && input.charAt(input.length - 1) === "]") {
+    let array = JSON.parse(input);
+    return (
+      <div>
+        <ul>
+          {array.map((ele, i) => {
+            return <div key={i}>{ele}</div>;
+          })}
+        </ul>
+      </div>
+    );
+  }
 
   return <div style={{ height: "500px", width: "500px" }}>{renderApp()}</div>;
 }
